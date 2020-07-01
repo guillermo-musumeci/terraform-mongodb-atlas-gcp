@@ -1,1 +1,1 @@
-# terraform-mongodb-atlas-gcp
+# Deploying a MongoDB Atlas in GCP using Terraform
