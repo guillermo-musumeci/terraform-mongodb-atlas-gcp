@@ -42,7 +42,7 @@ resource "mongodbatlas_project_ip_whitelist" "project-whitelist-myip" {
 
 resource "mongodbatlas_project_ip_whitelist" "atlas-whitelist-cidr" {
   project_id = mongodbatlas_project.atlas-project.id
-  cidr_block = "200.171.171.200/32"
+  cidr_block = var.whitelist_cidr
   comment    = "CIDR block for main office"
 }
 
