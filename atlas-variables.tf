@@ -39,11 +39,3 @@ variable "whitelist_cidr" {
   type        = string
   description = "CIDR to whitelist access to the project"
 }
-
-# IP Address whitelist
-variable "whitelist_ip_address" {
-  type        = string
-  description = "IP address to whitelist access to the project"
-}
-
-
