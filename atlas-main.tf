@@ -40,10 +40,12 @@ resource "mongodbatlas_project_ip_whitelist" "project-whitelist-myip" {
   comment    = "IP Address for my home office"
 }
 
+# Whitelist CIDR
 resource "mongodbatlas_project_ip_whitelist" "atlas-whitelist-cidr" {
+  for_each = toset(var.whitelist_list_cidr)
+
   project_id = mongodbatlas_project.atlas-project.id
-  cidr_block = var.whitelist_cidr
-  comment    = "CIDR block for main office"
+  cidr_block = each.key
 }
 
 # Create a MongoDB Atlas Cluster
