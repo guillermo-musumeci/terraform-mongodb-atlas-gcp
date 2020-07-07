@@ -35,7 +35,7 @@ variable "atlas_region" {
 }
 
 # CIDR whitelist
-variable "whitelist_cidr" {
-  type        = string
+variable "whitelist_list_cidr" {
+  type        = list(string)
   description = "CIDR to whitelist access to the project"
 }
